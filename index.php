@@ -31,6 +31,6 @@ function tckn_validation(int $tckn, string $name, string $lastname, int $birth_y
   
 }
 
-
-
+# SAMPLE USAGE
+print_r(tckn_validation(12345678900, 'BARIŞ', 'TAŞKIRAN', 1990));
 
