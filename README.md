@@ -23,8 +23,8 @@ function tckn_validation(int $tckn, string $name, string $lastname, int $birth_y
   try {
     $response = $connection->TCKimlikNoDogrula([
         'TCKimlikNo'  => $tckn,
-        'Ad'          => mb_strtoupper(tckn_name_replace($_name)),
-        'Soyad'       => mb_strtoupper(tckn_name_replace($_lastname)),
+        'Ad'          => mb_strtoupper(tckn_name_replace($name)),
+        'Soyad'       => mb_strtoupper(tckn_name_replace($lastname)),
         'DogumYili'   => $birth_year # must be an only birth year (such as 1990, 2000)
     ]);
     $result = ($response->TCKimlikNoDogrulaResult ? true : false);
